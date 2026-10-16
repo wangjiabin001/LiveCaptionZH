@@ -274,9 +274,12 @@ def main(argv=None) -> int:
     print("=" * 62)
 
     if not os.path.isfile(args.config):
-        print(f"[提示] 首次运行，已生成配置文件：{EXAMPLE_PATH}")
-        with open(EXAMPLE_PATH, "w", encoding="utf-8") as f:
-            json.dump(cfg, f, ensure_ascii=False, indent=2)
+        try:
+            with open(args.config, "w", encoding="utf-8") as f:
+                json.dump(DEFAULTS, f, ensure_ascii=False, indent=2)
+            print(f"[提示] 首次运行，已生成配置文件：{args.config}")
+        except Exception as e:
+            print(f"[警告] 写配置文件失败：{e}")
 
     overlay = None
     if not args.console:
