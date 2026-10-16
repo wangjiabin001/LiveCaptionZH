@@ -17,12 +17,15 @@ import asyncio
 import dataclasses
 import json
 import os
+import re
+import numpy as np
 import sys
 import threading
 import time
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
+SENT_SPLIT = re.compile(r"(?<=[.!?。！？])\s+|\n+")
 CONFIG_PATH = os.path.join(ROOT, "config.json")
 EXAMPLE_PATH = os.path.join(ROOT, "config.example.json")
 
@@ -120,7 +123,9 @@ class CaptionPipeline:
         self.translator = None
         self._mt_warned = False
         self._t0 = time.time()
-
+        self._rms = 0.0
+        self._last_beat = 0.0
+        self._sub_count = 0
     # ---------- 引擎参数 ----------
     def _engine_kwargs(self) -> dict:
         from whisperlivekit.config import WhisperLiveKitConfig
@@ -148,6 +153,9 @@ class CaptionPipeline:
             "vad": True,
             "diarization": False,
             "beams": 1,
+            # 缓冲越小，重复解码的越少 → 延迟越低（默认 15/30 会累积到十几秒滞后）
+            "buffer_trimming_sec": 6.0,
+            "max_buffered_audio": 12.0,
             "log_level": "warning",
         }
         valid = {f.name for f in dataclasses.fields(WhisperLiveKitConfig)}
@@ -209,6 +217,15 @@ class CaptionPipeline:
                 chunk = await loop.run_in_executor(None, next, it)
             except (StopIteration, RuntimeError):
                 break
+            if chunk:
+                arr = np.frombuffer(chunk, dtype=np.int16)
+                if arr.size:
+                    self._rms = float(np.abs(arr).mean()) / 32768.0
+            now = time.time()
+            if now - self._last_beat >= 10:
+                self._last_beat = now
+                warn = "" if self._rms > 0.0015 else "   ← 没听到声音：确认视频在播放、且走的是系统默认播放设备"
+                print(f"[状态] 运行 {int(now - self._t0)}s | 采集音量 {self._rms:.4f} | 已出字幕 {self._sub_count} 条{warn}", flush=True)
             await processor.process_audio(chunk)
 
         self.running = False
@@ -226,7 +243,12 @@ class CaptionPipeline:
                 if not pairs or pairs == self._last_pairs:
                     continue
                 self._last_pairs = pairs
-                src = " ".join(p[0] for p in pairs).strip()
+                self._sub_count += 1
+                src_full = " ".join(p[0] for p in pairs).strip()
+                # 识别结果会不断累积，字幕条上只留最后 max_lines 句，否则越贴越长
+                parts = [x for x in SENT_SPLIT.split(src_full) if x.strip()]
+                keep = max(1, int(self.cfg.get("max_lines", 2)))
+                src = " ".join(parts[-keep:]) if parts else src_full
                 dst = " ".join(p[1] for p in pairs if p[1]).strip()
                 if not dst and self.translator is not None and src:
                     try:
@@ -236,7 +258,7 @@ class CaptionPipeline:
                         if not self._mt_warned:
                             self._mt_warned = True
                             print(f"[警告] 翻译失败：{type(e).__name__}: {e}", flush=True)
-                if self.console or not self.overlay:
+                if self.console or not self.overlay or os.environ.get("LIVECAPTION_DEBUG"):
                     print(f"[原文] {src}\n[中文] {dst}\n", flush=True)
                 if self.overlay:
                     self.overlay.push(src, dst)

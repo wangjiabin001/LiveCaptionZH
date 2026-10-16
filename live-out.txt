@@ -1,0 +1,361 @@
+==============================================================
+  ʵʱ������Ļ LiveCaptionZH
+  Դ���� auto �� Ŀ�� zh  ģ�� large-v3  ���� ��
+==============================================================
+[1/3] ��ϵͳ�����ɼ� ��
+      �豸������ (MINISO-A35 Stereo)
+[2/3] ����ʶ��ģ�� D:\LiveCaptionZH\models\faster-whisper-large-v3 ��
+      ���ط���ģ�� NLLB ��
+[transformers] The tokenizer you are loading from 'D:\LiveCaptionZH\nllb-200-distilled-600M-ctranslate2' with an incorrect regex pattern: https://huggingface.co/mistralai/Mistral-Small-3.1-24B-Instruct-2503/discussions/84#69121093e8b480e709447d5e. This will lead to incorrect tokenization. You should set the `fix_mistral_regex=True` flag when loading this tokenizer to fix this issue.
+      �������
+INFO:whisperlivekit.local_agreement.whisper_online:Loading Whisper base model for language auto using backend faster-whisper...
+INFO:whisperlivekit.local_agreement.whisper_online:done. It took 7.8 seconds.
+INFO:faster_whisper:Processing audio with duration 00:11.000
+INFO:faster_whisper:Detected language 'en' with probability 0.90
+INFO:whisperlivekit.warmup:ASR model is warmed up.
+INFO:whisperlivekit.core:Using LocalAgreement policy with faster-whisper backend
+[3/3] ��ʼ����Ļ ���� ����������������Ƶ����
+
+INFO:whisperlivekit.audio_processor:internal_buffer=0.00s | lag=0.02s | + Silence of = 0.00s
+INFO:whisperlivekit.audio_processor:internal_buffer=0.00s | lag=0.02s |
+INFO:faster_whisper:Processing audio with duration 00:00.100
+INFO:faster_whisper:Detected language 'en' with probability 0.64
+INFO:whisperlivekit.audio_processor:internal_buffer=0.10s | lag=0.69s |
+INFO:faster_whisper:Processing audio with duration 00:00.600
+INFO:faster_whisper:Detected language 'en' with probability 0.98
+INFO:faster_whisper:Processing audio with duration 00:00.600
+INFO:faster_whisper:Detected language 'en' with probability 0.98
+INFO:whisperlivekit.audio_processor:internal_buffer=0.60s | lag=0.93s | + Silence starting
+INFO:whisperlivekit.audio_processor:internal_buffer=0.60s | lag=1.64s | + Silence of = 0.30s | last_end = 0.26 |
+INFO:whisperlivekit.audio_processor:internal_buffer=0.90s | lag=1.34s |
+INFO:faster_whisper:Processing audio with duration 00:02.300
+[ԭ��] we've got.
+[����] ������.
+
+INFO:faster_whisper:Detected language 'en' with probability 0.98
+D:\LiveCaptionZH\.venv\Lib\site-packages\soundcard\mediafoundation.py:772: SoundcardRuntimeWarning: data discontinuity in recording
+  warnings.warn("data discontinuity in recording", SoundcardRuntimeWarning)
+INFO:whisperlivekit.audio_processor:internal_buffer=2.30s | lag=0.75s |
+INFO:faster_whisper:Processing audio with duration 00:02.600
+INFO:faster_whisper:Detected language 'en' with probability 0.99
+INFO:faster_whisper:Processing audio with duration 00:02.600
+INFO:faster_whisper:Detected language 'en' with probability 0.99
+[ԭ��] we've got. plenty of counter space.
+[����] ������. �ܶ��̨�ռ�.
+
+D:\LiveCaptionZH\.venv\Lib\site-packages\soundcard\mediafoundation.py:772: SoundcardRuntimeWarning: data discontinuity in recording
+  warnings.warn("data discontinuity in recording", SoundcardRuntimeWarning)
+INFO:whisperlivekit.audio_processor:internal_buffer=2.60s | lag=1.25s | + Silence starting | last_end = 2.02 |
+INFO:whisperlivekit.audio_processor:internal_buffer=2.60s | lag=2.09s | + Silence of = 0.03s | last_end = 2.02 |
+INFO:whisperlivekit.audio_processor:internal_buffer=2.63s | lag=2.07s |
+INFO:faster_whisper:Processing audio with duration 00:04.700
+INFO:faster_whisper:Detected language 'en' with probability 0.99
+INFO:whisperlivekit.audio_processor:internal_buffer=4.70s | lag=1.15s |
+INFO:faster_whisper:Processing audio with duration 00:05.700
+INFO:faster_whisper:Detected language 'en' with probability 0.99
+[ԭ��] we've got. plenty of counter space. lots of cabinetry, stainless
+[����] �ܶ��̨�ռ�. �ܶ����,����
+
+INFO:faster_whisper:Processing audio with duration 00:05.700
+D:\LiveCaptionZH\.venv\Lib\site-packages\soundcard\mediafoundation.py:772: SoundcardRuntimeWarning: data discontinuity in recording
+  warnings.warn("data discontinuity in recording", SoundcardRuntimeWarning)
+INFO:faster_whisper:Detected language 'en' with probability 0.99
+INFO:whisperlivekit.audio_processor:internal_buffer=5.70s | lag=1.62s | + Silence starting | last_end = 4.06 |
+INFO:whisperlivekit.audio_processor:internal_buffer=5.70s | lag=2.78s | + Silence of = 0.50s | last_end = 4.86 |
+INFO:whisperlivekit.audio_processor:internal_buffer=6.20s | lag=2.28s |
+INFO:faster_whisper:Processing audio with duration 00:08.300
+INFO:faster_whisper:Detected language 'en' with probability 0.99
+[ԭ��] we've got. plenty of counter space. lots of cabinetry, stainless steel appliances.
+[����] �ܶ��̨�ռ�. �ܶ����,�����豸.
+
+D:\LiveCaptionZH\.venv\Lib\site-packages\soundcard\mediafoundation.py:772: SoundcardRuntimeWarning: data discontinuity in recording
+  warnings.warn("data discontinuity in recording", SoundcardRuntimeWarning)
+INFO:whisperlivekit.audio_processor:internal_buffer=8.30s | lag=1.61s |
+INFO:faster_whisper:Processing audio with duration 00:09.600
+INFO:faster_whisper:Detected language 'en' with probability 0.99
+INFO:whisperlivekit.audio_processor:internal_buffer=9.60s | lag=1.98s |
+INFO:faster_whisper:Processing audio with duration 00:11.300
+[ԭ��] we've got. plenty of counter space. lots of cabinetry, stainless steel appliances. really nice
+[����] �ܶ����,�����豸. �ǳ���
+
+INFO:faster_whisper:Detected language 'en' with probability 0.99
+INFO:whisperlivekit.audio_processor:internal_buffer=11.30s | lag=2.05s |
+INFO:faster_whisper:Processing audio with duration 00:13.000
+INFO:faster_whisper:Detected language 'en' with probability 0.99
+INFO:whisperlivekit.audio_processor:internal_buffer=13.00s | lag=2.39s |
+INFO:faster_whisper:Processing audio with duration 00:13.900
+INFO:faster_whisper:Detected language 'en' with probability 0.99
+[ԭ��] we've got. plenty of counter space. lots of cabinetry, stainless steel appliances. really nice LVP on the floor, nice neutral color palette, perfect for the beach. And as you go into the
+[����] �ǳ�Ư���� LVP,Ư��������ɫ��,�ǳ��ʺϺ�. �������
+
+INFO:faster_whisper:Processing audio with duration 00:13.900
+D:\LiveCaptionZH\.venv\Lib\site-packages\soundcard\mediafoundation.py:772: SoundcardRuntimeWarning: data discontinuity in recording
+  warnings.warn("data discontinuity in recording", SoundcardRuntimeWarning)
+INFO:faster_whisper:Detected language 'en' with probability 0.99
+INFO:whisperlivekit.audio_processor:internal_buffer=13.90s | lag=4.37s | + Silence starting | last_end = 12.5 |
+INFO:whisperlivekit.audio_processor:internal_buffer=13.90s | lag=6.57s | + Silence of = 0.30s | last_end = 13.16 |
+INFO:whisperlivekit.audio_processor:internal_buffer=14.20s | lag=6.27s |
+INFO:faster_whisper:Processing audio with duration 00:19.600
+INFO:faster_whisper:Detected language 'en' with probability 1.00
+[ԭ��] we've got. plenty of counter space. lots of cabinetry, stainless steel appliances. really nice LVP on the floor, nice neutral color palette, perfect for the beach. And as you go into the living area.
+[����] �ǳ�Ư���� LVP,Ư��������ɫ��,�ǳ��ʺϺ�. ����������ʱ.
+
+D:\LiveCaptionZH\.venv\Lib\site-packages\soundcard\mediafoundation.py:772: SoundcardRuntimeWarning: data discontinuity in recording
+  warnings.warn("data discontinuity in recording", SoundcardRuntimeWarning)
+INFO:whisperlivekit.audio_processor:internal_buffer=9.10s | lag=3.87s |
+INFO:faster_whisper:Processing audio with duration 00:11.900
+INFO:faster_whisper:Detected language 'en' with probability 0.99
+INFO:whisperlivekit.audio_processor:internal_buffer=11.90s | lag=3.61s |
+INFO:faster_whisper:Processing audio with duration 00:14.500
+INFO:faster_whisper:Detected language 'en' with probability 0.99
+[ԭ��] we've got. plenty of counter space. lots of cabinetry, stainless steel appliances. really nice LVP on the floor, nice neutral color palette, perfect for the beach. And as you go into the living area. notice how all of the light floods in.
+[����] ����������ʱ. �������еĹ�������.
+
+D:\LiveCaptionZH\.venv\Lib\site-packages\soundcard\mediafoundation.py:772: SoundcardRuntimeWarning: data discontinuity in recording
+  warnings.warn("data discontinuity in recording", SoundcardRuntimeWarning)
+INFO:whisperlivekit.audio_processor:internal_buffer=14.50s | lag=16.30s |
+INFO:faster_whisper:Processing audio with duration 00:15.300
+INFO:faster_whisper:Detected language 'en' with probability 0.99
+[ԭ��] we've got. plenty of counter space. lots of cabinetry, stainless steel appliances. really nice LVP on the floor, nice neutral color palette, perfect for the beach. And as you go into the living area. notice how all of the light floods in. we are on the corner so we have all this natural light coming
+[����] �������еĹ�������. �����ڽ���,����������������Ȼ������.
+
+D:\LiveCaptionZH\.venv\Lib\site-packages\soundcard\mediafoundation.py:772: SoundcardRuntimeWarning: data discontinuity in recording
+  warnings.warn("data discontinuity in recording", SoundcardRuntimeWarning)
+INFO:faster_whisper:Processing audio with duration 00:00.880
+INFO:faster_whisper:Detected language 'en' with probability 0.91
+[ԭ��] we've got. plenty of counter space. lots of cabinetry, stainless steel appliances. really nice LVP on the floor, nice neutral color palette, perfect for the beach. And as you go into the living area. notice how all of the light floods in. we are on the corner so we have all this natural light coming in crown molding throughout and you get access
+[����] �������еĹ�������. �����ڽ���,����������������Ȼ����,����������,
+
+D:\LiveCaptionZH\.venv\Lib\site-packages\soundcard\mediafoundation.py:772: SoundcardRuntimeWarning: data discontinuity in recording
+  warnings.warn("data discontinuity in recording", SoundcardRuntimeWarning)
+INFO:whisperlivekit.audio_processor:internal_buffer=0.88s | lag=18.04s | + Silence starting | last_end = 24.92 |
+INFO:whisperlivekit.audio_processor:internal_buffer=0.88s | lag=18.68s | + Silence of = 0.30s | last_end = 25.44 |
+INFO:whisperlivekit.audio_processor:internal_buffer=1.18s | lag=18.38s |
+INFO:faster_whisper:Processing audio with duration 00:03.780
+INFO:faster_whisper:Detected language 'en' with probability 0.99
+[ԭ��] we've got. plenty of counter space. lots of cabinetry, stainless steel appliances. really nice LVP on the floor, nice neutral color palette, perfect for the beach. And as you go into the living area. notice how all of the light floods in. we are on the corner so we have all this natural light coming in crown molding throughout and you get access to this
+[����] �������еĹ�������. �����ڽ���,����������������Ȼ����,����������,
+
+D:\LiveCaptionZH\.venv\Lib\site-packages\soundcard\mediafoundation.py:772: SoundcardRuntimeWarning: data discontinuity in recording
+  warnings.warn("data discontinuity in recording", SoundcardRuntimeWarning)
+INFO:faster_whisper:Processing audio with duration 00:03.780
+INFO:faster_whisper:Detected language 'en' with probability 0.99
+INFO:whisperlivekit.audio_processor:internal_buffer=3.78s | lag=16.59s | + Silence starting | last_end = 25.44 |
+INFO:whisperlivekit.audio_processor:internal_buffer=3.78s | lag=17.39s | + Silence of = 0.10s | last_end = 28.360000000000003 |
+INFO:whisperlivekit.audio_processor:internal_buffer=3.88s | lag=17.29s |
+INFO:faster_whisper:Processing audio with duration 00:06.080
+INFO:faster_whisper:Detected language 'en' with probability 0.99
+[ԭ��] we've got. plenty of counter space. lots of cabinetry, stainless steel appliances. really nice LVP on the floor, nice neutral color palette, perfect for the beach. And as you go into the living area. notice how all of the light floods in. we are on the corner so we have all this natural light coming in crown molding throughout and you get access to this up around corner balcony with
+[����] �������еĹ�������. �����ڽ�����,����������������Ȼ����,������������,
+
+D:\LiveCaptionZH\.venv\Lib\site-packages\soundcard\mediafoundation.py:772: SoundcardRuntimeWarning: data discontinuity in recording
+  warnings.warn("data discontinuity in recording", SoundcardRuntimeWarning)
+INFO:faster_whisper:Processing audio with duration 00:06.080
+INFO:faster_whisper:Detected language 'en' with probability 0.99
+INFO:whisperlivekit.audio_processor:internal_buffer=6.08s | lag=16.08s | + Silence starting | last_end = 28.360000000000003 |
+INFO:whisperlivekit.audio_processor:internal_buffer=6.08s | lag=17.03s | + Silence of = 0.01s | last_end = 30.380000000000003 |
+INFO:whisperlivekit.audio_processor:internal_buffer=6.09s | lag=17.02s |
+INFO:faster_whisper:Processing audio with duration 00:08.780
+INFO:faster_whisper:Detected language 'en' with probability 0.99
+[ԭ��] we've got. plenty of counter space. lots of cabinetry, stainless steel appliances. really nice LVP on the floor, nice neutral color palette, perfect for the beach. And as you go into the living area. notice how all of the light floods in. we are on the corner so we have all this natural light coming in crown molding throughout and you get access to this up around corner balcony with gorgeous views of the bay
+[����] �������еĹ�������. �����ڽ�����,����������������Ȼ����,������������,
+
+D:\LiveCaptionZH\.venv\Lib\site-packages\soundcard\mediafoundation.py:772: SoundcardRuntimeWarning: data discontinuity in recording
+  warnings.warn("data discontinuity in recording", SoundcardRuntimeWarning)
+INFO:faster_whisper:Processing audio with duration 00:08.780
+INFO:faster_whisper:Detected language 'en' with probability 0.99
+INFO:whisperlivekit.audio_processor:internal_buffer=8.78s | lag=16.25s | + Silence starting | last_end = 30.380000000000003 |
+INFO:whisperlivekit.audio_processor:internal_buffer=8.78s | lag=18.12s | + Silence of = 0.50s | last_end = 33.42 |
+INFO:whisperlivekit.audio_processor:internal_buffer=9.28s | lag=17.62s |
+INFO:faster_whisper:Processing audio with duration 00:19.180
+INFO:faster_whisper:Detected language 'en' with probability 0.99
+[ԭ��] we've got. plenty of counter space. lots of cabinetry, stainless steel appliances. really nice LVP on the floor, nice neutral color palette, perfect for the beach. And as you go into the living area. notice how all of the light floods in. we are on the corner so we have all this natural light coming in crown molding throughout and you get access to this up around corner balcony with gorgeous views of the bay that's not all let's go check out some of the bedrooms. you
+[����] �����ڽ�����,����������������Ȼ����,������������,����Խ�������������̨, ���
+
+D:\LiveCaptionZH\.venv\Lib\site-packages\soundcard\mediafoundation.py:772: SoundcardRuntimeWarning: data discontinuity in recording
+  warnings.warn("data discontinuity in recording", SoundcardRuntimeWarning)
+INFO:faster_whisper:Processing audio with duration 00:10.680
+INFO:faster_whisper:Detected language 'en' with probability 0.97
+INFO:whisperlivekit.audio_processor:internal_buffer=10.68s | lag=11.34s | + Silence starting | last_end = 33.42 |
+INFO:whisperlivekit.audio_processor:internal_buffer=10.68s | lag=12.91s | + Silence of = 7.33s | last_end = 33.42 |
+INFO:whisperlivekit.audio_processor:internal_buffer=0.00s | lag=5.58s |
+INFO:faster_whisper:Processing audio with duration 00:01.174
+INFO:faster_whisper:Detected language 'en' with probability 0.96
+INFO:whisperlivekit.audio_processor:internal_buffer=1.17s | lag=6.33s |
+INFO:faster_whisper:Processing audio with duration 00:01.974
+INFO:faster_whisper:Detected language 'en' with probability 0.98
+[ԭ��] we've got. plenty of counter space. lots of cabinetry, stainless steel appliances. really nice LVP on the floor, nice neutral color palette, perfect for the beach. And as you go into the living area. notice how all of the light floods in. we are on the corner so we have all this natural light coming in crown molding throughout and you get access to this up around corner balcony with gorgeous views of the bay that's not all let's go check out some of the bedrooms. you as well as the slider
+[����] �����ڽ�����,����������������Ȼ����,������������,����Խ�������������̨, ��ͻ���һ��
+
+INFO:whisperlivekit.audio_processor:internal_buffer=1.97s | lag=7.28s |
+INFO:faster_whisper:Processing audio with duration 00:02.674
+D:\LiveCaptionZH\.venv\Lib\site-packages\soundcard\mediafoundation.py:772: SoundcardRuntimeWarning: data discontinuity in recording
+  warnings.warn("data discontinuity in recording", SoundcardRuntimeWarning)
+INFO:faster_whisper:Detected language 'en' with probability 0.98
+INFO:whisperlivekit.audio_processor:internal_buffer=2.67s | lag=8.21s |
+INFO:faster_whisper:Processing audio with duration 00:03.674
+INFO:faster_whisper:Detected language 'en' with probability 0.99
+[ԭ��] we've got. plenty of counter space. lots of cabinetry, stainless steel appliances. really nice LVP on the floor, nice neutral color palette, perfect for the beach. And as you go into the living area. notice how all of the light floods in. we are on the corner so we have all this natural light coming in crown molding throughout and you get access to this up around corner balcony with gorgeous views of the bay that's not all let's go check out some of the bedrooms. you as well as the slider access
+[����] �����ڽ�����,����������������Ȼ����,������������,����Խ�������������̨, ��ͻ������
+
+D:\LiveCaptionZH\.venv\Lib\site-packages\soundcard\mediafoundation.py:772: SoundcardRuntimeWarning: data discontinuity in recording
+  warnings.warn("data discontinuity in recording", SoundcardRuntimeWarning)
+INFO:faster_whisper:Processing audio with duration 00:03.674
+INFO:faster_whisper:Detected language 'en' with probability 0.99
+[ԭ��] we've got. plenty of counter space. lots of cabinetry, stainless steel appliances. really nice LVP on the floor, nice neutral color palette, perfect for the beach. And as you go into the living area. notice how all of the light floods in. we are on the corner so we have all this natural light coming in crown molding throughout and you get access to this up around corner balcony with gorgeous views of the bay that's not all let's go check out some of the bedrooms. you as well as the slider access straight to all
+[����] �����ڽ�����,����������������Ȼ����,������������,����Խ�������������̨, ��ͻ���ֱ�ӽ�������
+
+D:\LiveCaptionZH\.venv\Lib\site-packages\soundcard\mediafoundation.py:772: SoundcardRuntimeWarning: data discontinuity in recording
+  warnings.warn("data discontinuity in recording", SoundcardRuntimeWarning)
+INFO:whisperlivekit.audio_processor:internal_buffer=3.67s | lag=9.19s | + Silence starting | last_end = 43.186 |
+INFO:whisperlivekit.audio_processor:internal_buffer=3.67s | lag=6.49s | + Silence of = 0.23s | last_end = 43.846000000000004 |
+INFO:whisperlivekit.audio_processor:internal_buffer=3.90s | lag=6.26s |
+INFO:faster_whisper:Processing audio with duration 00:05.374
+INFO:faster_whisper:Detected language 'en' with probability 0.96
+[ԭ��] we've got. plenty of counter space. lots of cabinetry, stainless steel appliances. really nice LVP on the floor, nice neutral color palette, perfect for the beach. And as you go into the living area. notice how all of the light floods in. we are on the corner so we have all this natural light coming in crown molding throughout and you get access to this up around corner balcony with gorgeous views of the bay that's not all let's go check out some of the bedrooms. you as well as the slider access straight to all these water views.
+[����] �����ڽ�����,����������������Ȼ����,������������,����Խ�������������̨, ��ͻ���ֱ�ӽ���������Щˮ��.
+
+D:\LiveCaptionZH\.venv\Lib\site-packages\soundcard\mediafoundation.py:772: SoundcardRuntimeWarning: data discontinuity in recording
+  warnings.warn("data discontinuity in recording", SoundcardRuntimeWarning)
+INFO:faster_whisper:Processing audio with duration 00:05.374
+INFO:faster_whisper:Detected language 'en' with probability 0.96
+INFO:whisperlivekit.audio_processor:internal_buffer=5.37s | lag=7.50s | + Silence starting | last_end = 43.846000000000004 |
+[ԭ��] we've got. plenty of counter space. lots of cabinetry, stainless steel appliances. really nice LVP on the floor, nice neutral color palette, perfect for the beach. And as you go into the living area. notice how all of the light floods in. we are on the corner so we have all this natural light coming in crown molding throughout and you get access to this up around corner balcony with gorgeous views of the bay that's not all let's go check out some of the bedrooms. you as well as the slider access straight to all these water views. right from the head of the bed
+[����] ��ͻ���ֱ�ӽ���������Щˮ��. ֱ�ӴӴ�ͷ
+
+D:\LiveCaptionZH\.venv\Lib\site-packages\soundcard\mediafoundation.py:772: SoundcardRuntimeWarning: data discontinuity in recording
+  warnings.warn("data discontinuity in recording", SoundcardRuntimeWarning)
+INFO:whisperlivekit.audio_processor:internal_buffer=5.37s | lag=11.77s | + Silence of = 6.70s | last_end = 45.846000000000004 |
+INFO:whisperlivekit.audio_processor:internal_buffer=0.00s | lag=5.07s |
+INFO:faster_whisper:Processing audio with duration 00:00.100
+INFO:faster_whisper:Detected language 'en' with probability 0.59
+INFO:whisperlivekit.audio_processor:internal_buffer=0.10s | lag=6.06s |
+INFO:faster_whisper:Processing audio with duration 00:01.000
+INFO:faster_whisper:Detected language 'en' with probability 0.96
+INFO:whisperlivekit.audio_processor:internal_buffer=1.00s | lag=6.74s |
+INFO:faster_whisper:Processing audio with duration 00:01.700
+INFO:faster_whisper:Detected language 'en' with probability 0.98
+INFO:whisperlivekit.audio_processor:internal_buffer=1.70s | lag=7.44s |
+INFO:faster_whisper:Processing audio with duration 00:02.400
+INFO:faster_whisper:Detected language 'en' with probability 0.99
+INFO:whisperlivekit.audio_processor:internal_buffer=2.40s | lag=8.25s |
+INFO:faster_whisper:Processing audio with duration 00:03.200
+INFO:faster_whisper:Detected language 'en' with probability 0.99
+INFO:whisperlivekit.audio_processor:internal_buffer=3.20s | lag=9.31s |
+INFO:faster_whisper:Processing audio with duration 00:04.300
+INFO:faster_whisper:Detected language 'en' with probability 0.99
+INFO:whisperlivekit.audio_processor:internal_buffer=4.30s | lag=10.43s |
+INFO:faster_whisper:Processing audio with duration 00:05.400
+INFO:faster_whisper:Detected language 'en' with probability 0.99
+[ԭ��] as well as the slider access straight to all these water views. right from the head of the bed And welcome to the main en suite, right?
+[����] �������ֱ�ӽ���������Щˮ��. ����,��ʹӴ�ͷ��ʼ,��ӭ�������׷�,����?
+
+D:\LiveCaptionZH\.venv\Lib\site-packages\soundcard\mediafoundation.py:772: SoundcardRuntimeWarning: data discontinuity in recording
+  warnings.warn("data discontinuity in recording", SoundcardRuntimeWarning)
+INFO:whisperlivekit.audio_processor:internal_buffer=5.40s | lag=11.78s |
+INFO:faster_whisper:Processing audio with duration 00:05.700
+INFO:faster_whisper:Detected language 'en' with probability 0.99
+[ԭ��] as well as the slider access straight to all these water views. right from the head of the bed And welcome to the main en suite, right? You've got this
+[����] ����,��ʹӴ�ͷ��ʼ,��ӭ�������׷�,����? �������
+
+D:\LiveCaptionZH\.venv\Lib\site-packages\soundcard\mediafoundation.py:772: SoundcardRuntimeWarning: data discontinuity in recording
+  warnings.warn("data discontinuity in recording", SoundcardRuntimeWarning)
+INFO:faster_whisper:Processing audio with duration 00:05.700
+INFO:faster_whisper:Detected language 'en' with probability 0.99
+[ԭ��] as well as the slider access straight to all these water views. right from the head of the bed And welcome to the main en suite, right? You've got this massive closet right here
+[����] ����,��ʹӴ�ͷ��ʼ,��ӭ�������׷�,����? ����һ���޴���¹�.
+
+D:\LiveCaptionZH\.venv\Lib\site-packages\soundcard\mediafoundation.py:772: SoundcardRuntimeWarning: data discontinuity in recording
+  warnings.warn("data discontinuity in recording", SoundcardRuntimeWarning)
+INFO:whisperlivekit.audio_processor:internal_buffer=5.70s | lag=13.11s | + Silence starting | last_end = 57.566 |
+[ԭ��] as well as the slider access straight to all these water views. right from the head of the bed And welcome to the main en suite, right? You've got this massive closet right here with two
+[����] ����,��ʹӴ�ͷ��ʼ,��ӭ�������׷�,����? ����һ���޴���¹�,
+
+D:\LiveCaptionZH\.venv\Lib\site-packages\soundcard\mediafoundation.py:772: SoundcardRuntimeWarning: data discontinuity in recording
+  warnings.warn("data discontinuity in recording", SoundcardRuntimeWarning)
+INFO:whisperlivekit.audio_processor:internal_buffer=5.70s | lag=10.67s | + Silence of = 4.31s | last_end = 57.96600000000001 |
+INFO:whisperlivekit.audio_processor:internal_buffer=10.01s | lag=6.37s |
+INFO:faster_whisper:Processing audio with duration 00:10.100
+INFO:faster_whisper:Detected language 'en' with probability 0.99
+INFO:whisperlivekit.audio_processor:internal_buffer=10.10s | lag=7.87s |
+INFO:faster_whisper:Processing audio with duration 00:10.600
+INFO:faster_whisper:Detected language 'en' with probability 0.99
+INFO:faster_whisper:Processing audio with duration 00:10.600
+INFO:faster_whisper:Detected language 'en' with probability 0.99
+INFO:whisperlivekit.audio_processor:internal_buffer=10.60s | lag=9.32s | + Silence starting | last_end = 57.96600000000001 |
+INFO:whisperlivekit.audio_processor:internal_buffer=10.60s | lag=10.21s | + Silence of = 0.20s | last_end = 58.50600000000001 |
+INFO:whisperlivekit.audio_processor:internal_buffer=10.80s | lag=10.01s |
+INFO:faster_whisper:Processing audio with duration 00:14.500
+INFO:faster_whisper:Detected language 'en' with probability 0.99
+[ԭ��] as well as the slider access straight to all these water views. right from the head of the bed And welcome to the main en suite, right? You've got this massive closet right here with two sinks.
+[����] ����,��ʹӴ�ͷ��ʼ,��ӭ�������׷�,����? ����һ���޴���¹�,������ϴ�ּ�.
+
+D:\LiveCaptionZH\.venv\Lib\site-packages\soundcard\mediafoundation.py:772: SoundcardRuntimeWarning: data discontinuity in recording
+  warnings.warn("data discontinuity in recording", SoundcardRuntimeWarning)
+INFO:whisperlivekit.audio_processor:internal_buffer=14.50s | lag=11.91s |
+INFO:faster_whisper:Processing audio with duration 00:15.500
+INFO:faster_whisper:Detected language 'en' with probability 0.99
+INFO:faster_whisper:Processing audio with duration 00:02.840
+INFO:faster_whisper:Detected language 'en' with probability 0.91
+[ԭ��] as well as the slider access straight to all these water views. right from the head of the bed And welcome to the main en suite, right? You've got this massive closet right here with two sinks. a huge shower in the water closet area, an extra
+[����] ����һ���޴���¹�,������ϴ�ּ�. ��ˮ����,һ���޴����ԡ,
+
+D:\LiveCaptionZH\.venv\Lib\site-packages\soundcard\mediafoundation.py:772: SoundcardRuntimeWarning: data discontinuity in recording
+  warnings.warn("data discontinuity in recording", SoundcardRuntimeWarning)
+INFO:whisperlivekit.audio_processor:internal_buffer=2.84s | lag=13.97s | + Silence starting | last_end = 66.726 |
+[ԭ��] as well as the slider access straight to all these water views. right from the head of the bed And welcome to the main en suite, right? You've got this massive closet right here with two sinks. a huge shower in the water closet area, an extra vanity
+[����] ����һ���޴���¹�,������ϴ�ּ�. ��ˮ������,��һ���޴����ԡ,һ�����������.
+
+D:\LiveCaptionZH\.venv\Lib\site-packages\soundcard\mediafoundation.py:772: SoundcardRuntimeWarning: data discontinuity in recording
+  warnings.warn("data discontinuity in recording", SoundcardRuntimeWarning)
+INFO:whisperlivekit.audio_processor:internal_buffer=2.84s | lag=14.21s | + Silence of = 6.83s | last_end = 67.086 |
+INFO:whisperlivekit.audio_processor:internal_buffer=0.00s | lag=7.39s |
+INFO:faster_whisper:Processing audio with duration 00:00.074
+INFO:faster_whisper:Detected language 'en' with probability 0.60
+INFO:whisperlivekit.audio_processor:internal_buffer=0.07s | lag=8.20s |
+INFO:faster_whisper:Processing audio with duration 00:00.874
+INFO:faster_whisper:Detected language 'en' with probability 0.99
+INFO:whisperlivekit.audio_processor:internal_buffer=0.87s | lag=8.96s |
+INFO:faster_whisper:Processing audio with duration 00:01.574
+INFO:faster_whisper:Detected language 'en' with probability 1.00
+INFO:whisperlivekit.audio_processor:internal_buffer=1.57s | lag=9.84s |
+INFO:faster_whisper:Processing audio with duration 00:02.474
+INFO:faster_whisper:Detected language 'en' with probability 1.00
+INFO:whisperlivekit.audio_processor:internal_buffer=2.47s | lag=10.84s |
+INFO:faster_whisper:Processing audio with duration 00:03.474
+INFO:faster_whisper:Detected language 'en' with probability 0.99
+INFO:whisperlivekit.audio_processor:internal_buffer=3.47s | lag=11.87s |
+INFO:faster_whisper:Processing audio with duration 00:04.474
+INFO:faster_whisper:Detected language 'en' with probability 1.00
+[ԭ��] And welcome to the main en suite, right? You've got this massive closet right here with two sinks. a huge shower in the water closet area, an extra vanity get ready and all of your
+[����] ����һ���޴���¹�,������ϴ�ּ�. һ���޴����ԡ��ˮ����,һ�����������׼��,
+
+D:\LiveCaptionZH\.venv\Lib\site-packages\soundcard\mediafoundation.py:772: SoundcardRuntimeWarning: data discontinuity in recording
+  warnings.warn("data discontinuity in recording", SoundcardRuntimeWarning)
+INFO:whisperlivekit.audio_processor:internal_buffer=4.47s | lag=12.98s |
+INFO:faster_whisper:Processing audio with duration 00:04.574
+INFO:faster_whisper:Detected language 'en' with probability 1.00
+[ԭ��] And welcome to the main en suite, right? You've got this massive closet right here with two sinks. a huge shower in the water closet area, an extra vanity get ready and all of your needs this is a wonderful
+[����] ����һ���޴���¹�,������ϴ�ּ�. һ���޴����ԡ��ˮ����,һ�����������׼�������������Ҫ����һ�������
+
+D:\LiveCaptionZH\.venv\Lib\site-packages\soundcard\mediafoundation.py:772: SoundcardRuntimeWarning: data discontinuity in recording
+  warnings.warn("data discontinuity in recording", SoundcardRuntimeWarning)
+[ԭ��] And welcome to the main en suite, right? You've got this massive closet right here with two sinks. a huge shower in the water closet area, an extra vanity get ready and all of your needs this is a wonderful end
+[����] ����һ���޴���¹�,������ϴ�ּ�. һ���޴����ԡ��ˮ����,һ�����������׼�������������Ҫ����һ�����õĽ��
+
+INFO:faster_whisper:Processing audio with duration 00:04.574
+D:\LiveCaptionZH\.venv\Lib\site-packages\soundcard\mediafoundation.py:772: SoundcardRuntimeWarning: data discontinuity in recording
+  warnings.warn("data discontinuity in recording", SoundcardRuntimeWarning)
+INFO:faster_whisper:Detected language 'en' with probability 1.00
+INFO:whisperlivekit.audio_processor:internal_buffer=4.57s | lag=14.97s | + Silence starting | last_end = 77.41199999999999 |
+[ԭ��] And welcome to the main en suite, right? You've got this massive closet right here with two sinks. a huge shower in the water closet area, an extra vanity get ready and all of your needs this is a wonderful end unit.
+[����] ����һ���޴���¹�,������ϴ�ּ�. һ���޴����ԡ��ˮ����,һ�����������׼��,���������Ҫ,����һ��������ն˵�λ.
+
+INFO:whisperlivekit.audio_processor:internal_buffer=4.57s | lag=12.40s | + Silence of = 0.03s | last_end = 77.952 |
+INFO:whisperlivekit.audio_processor:internal_buffer=4.61s | lag=12.36s |
+INFO:faster_whisper:Processing audio with duration 00:05.474
+D:\LiveCaptionZH\.venv\Lib\site-packages\soundcard\mediafoundation.py:772: SoundcardRuntimeWarning: data discontinuity in recording
+  warnings.warn("data discontinuity in recording", SoundcardRuntimeWarning)
+INFO:faster_whisper:Detected language 'en' with probability 0.98
+INFO:faster_whisper:Processing audio with duration 00:05.474
+INFO:faster_whisper:Detected language 'en' with probability 0.98
