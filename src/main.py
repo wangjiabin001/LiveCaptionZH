@@ -166,7 +166,7 @@ class CaptionPipeline:
             self.running = False
 
     async def _run(self) -> None:
-        from whisperlivekit import AudioProcessor
+        from whisperlivekit import AudioProcessor, TranscriptionEngine
         from capture import LoopbackCapture      # 同目录
 
         print("[1/3] 打开系统声音采集 …", flush=True)
@@ -174,8 +174,14 @@ class CaptionPipeline:
         print(f"      设备：{self._capture.speaker.name}", flush=True)
 
         kwargs = self._engine_kwargs()
-        print(f"[2/3] 加载识别模型 {self.cfg['model']}（首次运行会自动下载，可能较慢）…", flush=True)
-        processor = AudioProcessor(**kwargs)
+        shown = kwargs.get("model_dir") or kwargs.get("model_size")
+        print(f"[2/3] 加载识别模型 {shown} …", flush=True)
+        if self.cfg["translate"]:
+            print("      翻译引擎 NLLB（首次使用会加载翻译模型）…", flush=True)
+        # 注意：target_language 必须交给 TranscriptionEngine（引擎级），
+        # 直接塞给 AudioProcessor 会被当成"会话参数"丢弃 → 翻译不生效
+        engine = TranscriptionEngine(**kwargs)
+        processor = AudioProcessor(transcription_engine=engine, pcm_input=True)
         gen = await processor.create_tasks()
         consumer = asyncio.create_task(self._consume(gen))
         print("[3/3] 开始出字幕 —— 播放任意外语音视频即可\n", flush=True)
@@ -243,6 +249,12 @@ class CaptionPipeline:
 
 def main(argv=None) -> int:
     args = parse_args(argv)
+    # 翻译库(nllw)把模型存在"当前目录"的相对路径下，所以固定工作目录到项目根
+    sys.path.insert(0, HERE)
+    try:
+        os.chdir(ROOT)
+    except Exception:
+        pass
     _prepare_env()
 
     if args.list_devices:
