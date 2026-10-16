@@ -7,13 +7,17 @@ config.json
 out/
 .DS_Store
 
-# 临时/测试文件
+# 临时/测试/调试文件
 work-*.py
+diag.py
+speed-asr.py
+refetch-nllb.ps1
 test-*.wav
 speedtest.bin
 st2.bin
 capture-out.wav
 tools-download.ps1
+log-*.txt
 
 # 模型文件太大，不进仓库（用 下载模型.cmd 拉取）
 models/
