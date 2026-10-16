@@ -117,6 +117,8 @@ class CaptionPipeline:
         self.running = True
         self._capture = None
         self._last_pairs: list[tuple[str, str]] = []
+        self.translator = None
+        self._mt_warned = False
         self._t0 = time.time()
 
     # ---------- 引擎参数 ----------
@@ -139,7 +141,7 @@ class CaptionPipeline:
             "backend": "faster-whisper",
             "backend_policy": "localagreement",
             "lan": self.cfg["language"],
-            "target_language": self.cfg["target_language"] if self.cfg["translate"] else "",
+            "target_language": "",   # 上游内置流式翻译实测不产出译文，改由本项目 translate.py 直接翻已提交句子
             "translation_backend": "nllb",
             "nllb_backend": "ctranslate2",   # 用 CTranslate2 版 NLLB：快且省内存
             "pcm_input": True,               # 我们直接喂 PCM，不需要 ffmpeg 解码
@@ -177,7 +179,17 @@ class CaptionPipeline:
         shown = kwargs.get("model_dir") or kwargs.get("model_size")
         print(f"[2/3] 加载识别模型 {shown} …", flush=True)
         if self.cfg["translate"]:
-            print("      翻译引擎 NLLB（首次使用会加载翻译模型）…", flush=True)
+            from translate import NllbTranslator
+            mt_dir = os.path.join(ROOT, "nllb-200-distilled-600M-ctranslate2")
+            if not os.path.isdir(mt_dir):
+                print(f"      [警告] 没找到翻译模型 {mt_dir}，先跑 下载模型.cmd；本次只出原文", flush=True)
+            else:
+                print("      加载翻译模型 NLLB …", flush=True)
+                self.translator = NllbTranslator(
+                    mt_dir, src_lang=self.cfg["language"] if self.cfg["language"] != "auto" else "en",
+                    tgt_lang=self.cfg["target_language"],
+                )
+                print("      翻译就绪", flush=True)
         # 注意：target_language 必须交给 TranscriptionEngine（引擎级），
         # 直接塞给 AudioProcessor 会被当成"会话参数"丢弃 → 翻译不生效
         engine = TranscriptionEngine(**kwargs)
@@ -216,6 +228,14 @@ class CaptionPipeline:
                 self._last_pairs = pairs
                 src = " ".join(p[0] for p in pairs).strip()
                 dst = " ".join(p[1] for p in pairs if p[1]).strip()
+                if not dst and self.translator is not None and src:
+                    try:
+                        dst = self.translator.translate_incremental(src)
+                    except Exception as e:
+                        dst = ""
+                        if not self._mt_warned:
+                            self._mt_warned = True
+                            print(f"[警告] 翻译失败：{type(e).__name__}: {e}", flush=True)
                 if self.console or not self.overlay:
                     print(f"[原文] {src}\n[中文] {dst}\n", flush=True)
                 if self.overlay:

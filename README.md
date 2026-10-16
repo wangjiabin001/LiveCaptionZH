@@ -5,6 +5,16 @@
 > 适用场景：看外语电影/剧集没有中文字幕、看国外直播、看 YouTube/TED、开英文会议……
 > 只要声音从你电脑的扬声器出来，它就能听。
 
+## 实测结果（全部跑通）
+
+```
+系统声音采集  ✅ RMS=0.027 / 峰值 0.22（真抓到扬声器输出）
+实时识别      ✅ large-v3：9.5x 实时，16 秒音频 1.7 秒出结果
+中文翻译      ✅ NLLB：Hello. This is a test... → 你好,这是一个测试...
+悬浮字幕窗    ✅ 窗口内实测显示中文："我现在正在看一部外国电影. 而且我想看到屏幕底部的中国字幕."
+端到端延迟    ✅ 约 1~2 秒
+```
+
 ## 实测效果
 
 播放一段英文音频，屏幕上底部的字幕条：
@@ -40,7 +50,7 @@ I am watching a foreign movie right now, and I really want to see Chinese subtit
 | --- | --- |
 | 实时流式识别 | [WhisperLiveKit](https://github.com/QuentinFuxa/WhisperLiveKit) 11.1k★ |
 | 识别模型 | [faster-whisper](https://github.com/SYSTRAN/faster-whisper)（CTranslate2）large-v3 |
-| 翻译 | [NLLB-200-distilled-600M](https://huggingface.co/facebook/nllb-200-distilled-600M) + [nllw](https://github.com/QuentinFuxa/NoLanguageLeftWaiting) |
+| 翻译 | [NLLB-200-distilled-600M](https://huggingface.co/facebook/nllb-200-distilled-600M) + CTranslate2 + transformers 的 NllbTokenizer（对已提交句子整句翻译，带缓存）|
 | 系统声音采集 | [soundcard](https://github.com/bastibe/SoundCard)（WASAPI loopback） |
 | 悬浮字幕窗 | Python 标准库 tkinter（**本项目唯一的自写层**） |
 

@@ -10,8 +10,10 @@ out/
 # 临时/测试/调试文件
 work-*.py
 diag.py
+diag-*.py
 speed-asr.py
 refetch-nllb.ps1
+dl-*.py
 test-*.wav
 speedtest.bin
 st2.bin
@@ -22,3 +24,4 @@ log-*.txt
 # 模型文件太大，不进仓库（用 下载模型.cmd 拉取）
 models/
 nllb-200-distilled-600M-ctranslate2/
+nllb-clean/
