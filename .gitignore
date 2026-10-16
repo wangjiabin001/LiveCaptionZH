@@ -29,3 +29,4 @@ log-*.txt
 models/
 nllb-200-distilled-600M-ctranslate2/
 nllb-clean/
+live-*.txt
