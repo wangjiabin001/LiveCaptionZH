@@ -8,25 +8,28 @@ out/
 out.txt
 .DS_Store
 
-# 临时/测试/调试文件
+# 临时/测试/调试文件（不属于项目本身）
 work-*.py
-diag.py
 diag-*.py
 speed-asr.py
-refetch-nllb.ps1
 dl-*.py
-push-via-api.py
-pushed_sha
-.pushed_sha
+refetch-nllb.ps1
+tools-download.ps1
+shot.ps1
+crop*.ps1
+screen*.png
+overlay-test.png
+live-*.txt
+log-*.txt
 test-*.wav
 speedtest.bin
 st2.bin
 capture-out.wav
-tools-download.ps1
-log-*.txt
+push-via-api.py
+pushed_sha
+.pushed_sha
 
 # 模型文件太大，不进仓库（用 下载模型.cmd 拉取）
 models/
 nllb-200-distilled-600M-ctranslate2/
 nllb-clean/
-live-*.txt
