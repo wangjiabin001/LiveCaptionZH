@@ -10,7 +10,8 @@ out.txt
 
 # 临时/测试/调试文件（不属于项目本身）
 work-*.py
-diag-*.py
+diag.py
+diag*.py
 speed-asr.py
 dl-*.py
 refetch-nllb.ps1
