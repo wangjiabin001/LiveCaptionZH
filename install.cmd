@@ -1,26 +1,31 @@
-ï»¿@echo off
-chcp 65001 >nul
+@echo off
+title LiveCaptionZH - °²×°
 cd /d %~dp0
 echo ============================================================
-echo   LiveCaptionZH å®æ—¶ä¸­æ–‡å­—å¹• - å®‰è£…
+echo   ÊµÊ±ÖĞÎÄ×ÖÄ» LiveCaptionZH - °²×°
 echo ============================================================
 if not exist .venv (
-  echo [1/3] åˆ›å»º Python è™šæ‹Ÿç¯å¢ƒ ...
+  echo [1/3] ´´½¨ Python ĞéÄâ»·¾³ ...
   python -m venv .venv
   if errorlevel 1 (
-    echo [é”™è¯¯] æ²¡æ‰¾åˆ° pythonï¼Œè¯·å…ˆå®‰è£… Python 3.10+ å¹¶å‹¾é€‰ Add to PATH
-    pause & exit /b 1
+    echo [´íÎó] Ã»ÕÒµ½ python£¬ÇëÏÈ°²×° Python 3.10+ ²¢¹´Ñ¡ Add Python to PATH
+    pause
+    exit /b 1
   )
 ) else (
-  echo [1/3] è™šæ‹Ÿç¯å¢ƒå·²å­˜åœ¨ï¼Œè·³è¿‡
+  echo [1/3] ĞéÄâ»·¾³ÒÑ´æÔÚ£¬Ìø¹ı
 )
-echo [2/3] å®‰è£…ä¾èµ–ï¼ˆçº¦ 3GBï¼Œé¦–æ¬¡è¾ƒæ…¢ï¼‰...
+echo [2/3] °²×°ÒÀÀµ£¨Ô¼ 3GB£¬Ê×´Î½ÏÂı£¬ÇëÄÍĞÄµÈ£©...
 .venv\Scripts\python.exe -m pip install --upgrade pip -q
 .venv\Scripts\python.exe -m pip install -r requirements.txt
-if errorlevel 1 ( echo [é”™è¯¯] ä¾èµ–å®‰è£…å¤±è´¥ & pause & exit /b 1 )
-echo [3/3] å®Œæˆ
+if errorlevel 1 (
+  echo [´íÎó] ÒÀÀµ°²×°Ê§°Ü
+  pause
+  exit /b 1
+)
+echo [3/3] ÒÀÀµ°²×°Íê³É
 echo.
-echo   ä¸‹ä¸€æ­¥ï¼šåŒå‡» start.cmd å¼€å§‹ä½¿ç”¨
-echo   é¦–æ¬¡è¿è¡Œä¼šè‡ªåŠ¨ä¸‹è½½è¯†åˆ«æ¨¡å‹å’Œç¿»è¯‘æ¨¡å‹ï¼ˆçº¦ 2.5GBï¼Œèµ° hf-mirror é•œåƒï¼‰
+echo   ÏÂÒ»²½£ºË«»÷ ÏÂÔØÄ£ĞÍ.cmd ÏÂÔØÄ£ĞÍ£¨Ô¼ 5.5GB£©
+echo   È»ºóË«»÷ start.cmd ¿ªÊ¼Ê¹ÓÃ
 echo.
 pause

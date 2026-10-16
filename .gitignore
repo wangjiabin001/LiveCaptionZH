@@ -5,6 +5,7 @@ __pycache__/
 config.json
 *.log
 out/
+out.txt
 .DS_Store
 
 # 临时/测试/调试文件
@@ -14,6 +15,9 @@ diag-*.py
 speed-asr.py
 refetch-nllb.ps1
 dl-*.py
+push-via-api.py
+pushed_sha
+.pushed_sha
 test-*.wav
 speedtest.bin
 st2.bin

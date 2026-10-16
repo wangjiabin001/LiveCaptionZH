@@ -1,9 +1,10 @@
-О╩©@echo off
-chcp 65001 >nul
+@echo off
+title LiveCaptionZH - обтьдёпм
 cd /d %~dp0
 set HF_ENDPOINT=https://hf-mirror.com
-echo Е╪─Е╖▀Д╦▀Х╫╫Ф╗║Е·▀О╪┬Х╞├Е┬╚ 3GB + Г©╩Х╞▒ 2.4GBО╪▄Ф■╞Ф▄│Ф√╜Г┌╧Г╩╜Д╪═О╪┴...
-echo Д╦╜И─■Е┘ЁФ▌┴Д╧÷Ф╡║Д╨▀О╪▄Д╦▀Ф╛║Х©░Х║▄Д╪ Х┤╙Е┼╗Ф▌╔Г²─Д╦▀Ц─┌
+echo обтьдёпмё╨й╤╠П 3GB + ╥╜рК 2.4GBё╛ж╖Ёж╤о╣ЦпЬ╢╚║ё
+echo жпм╬╧ь╣Тр╡ц╩╧ьо╣ё╛об╢нткпп╩Авт╤╞╫свеоб║ё
 echo.
 .venv\Scripts\python.exe tools\fetch_models.py %*
+echo.
 pause

@@ -1,19 +1,22 @@
-О╩©@echo off
-chcp 65001 >nul
-title LiveCaptionZH - Е╝·Ф≈╤Д╦╜Ф√┤Е╜≈Е╧∙
+@echo off
+title LiveCaptionZH - й╣й╠жпндвжд╩
 cd /d %~dp0
 set HF_ENDPOINT=https://hf-mirror.com
 set HF_HUB_DISABLE_XET=1
 set HF_HUB_DISABLE_SYMLINKS_WARNING=1
 if not exist .venv\Scripts\python.exe (
-  echo [И■≥Х╞╞] Х©≤Ф╡║Е╝┴Хё┘О╪▄Х╞╥Е┘┬Е▐▄Е┤╩ install.cmd
-  pause & exit /b 1
+  echo [╢МнС] ╩╧ц╩╟╡в╟ё╛гКохк╚╩В install.cmd
+  pause
+  exit /b 1
 )
-cd src
-echo Ф▐░Г╓╨О╪ Ф°╛Г╙≈Е▐ёД╦█Х╕│Е┘ЁО╪▄Е┘ЁФ▌┴Е█ЁИ──Е┤╨Е╜≈Е╧∙Ц─┌
+echo ============================================================
+echo   й╣й╠жпндвжд╩ LiveCaptionZH
+echo   уБ╦Ж╢╟©з╡╩р╙╧ьё╛╧ь╣Т╬ммкЁЖвжд╩║ё
+echo ============================================================
 echo.
+cd src
 ..\.venv\Scripts\python.exe main.py %*
 cd ..
 echo.
-echo Е╜≈Е╧∙Е╥╡Е│°Ф╜╒Ц─┌
+echo вжд╩рямёж╧║ё
 pause
