@@ -1,0 +1,16 @@
+{
+  "model": "tiny",
+  "language": "en",
+  "target_language": "zh",
+  "translate": false,
+  "device": "",
+  "font_size": 28,
+  "source_font_size": 15,
+  "show_source": true,
+  "max_lines": 2,
+  "width_ratio": 0.82,
+  "bottom_offset": 90,
+  "alpha": 0.85,
+  "click_through": true,
+  "once": 55.0
+}

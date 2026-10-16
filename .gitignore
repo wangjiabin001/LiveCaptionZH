@@ -1,0 +1,20 @@
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+config.json
+*.log
+out/
+.DS_Store
+
+# 临时/测试文件
+work-*.py
+test-*.wav
+speedtest.bin
+st2.bin
+capture-out.wav
+tools-download.ps1
+
+# 模型文件太大，不进仓库（用 下载模型.cmd 拉取）
+models/
+nllb-200-distilled-600M-ctranslate2/

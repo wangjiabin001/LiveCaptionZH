@@ -1,0 +1,7 @@
+# 实时识别 + 翻译引擎（内含 faster-whisper / ctranslate2 / torch）
+whisperlivekit[translation]==0.2.26
+# 系统音频环回采集
+soundcard==0.4.6
+# CUDA 运行时（Windows 下 ctranslate2 需要，CPU 用户可删掉这两行）
+nvidia-cublas-cu12
+nvidia-cudnn-cu12
