@@ -107,13 +107,17 @@ class SubtitleOverlay:
             handles = [h for h in (parent, child) if h]
         except Exception:
             return
+        LWA_ALPHA = 0x00000002
         for hwnd in handles:
             try:
                 style = user32.GetWindowLongW(hwnd, GWL_EXSTYLE)
                 user32.SetWindowLongW(
                     hwnd, GWL_EXSTYLE,
-                    style | WS_EX_LAYERED | WS_EX_TRANSPARENT | WS_EX_TOOLWINDOW | WS_EX_NOACTIVATE,
+                    style | WS_EX_LAYERED | WS_EX_TRANSPARENT | WS_EX_TOOLWINDOW,
                 )
+                # 关键：手改 WS_EX_LAYERED 会清掉分层属性，必须重新设置一次，
+                # 否则窗口只剩背景、文字完全不渲染（实测踩过）
+                user32.SetLayeredWindowAttributes(hwnd, 0, int(255 * 0.85), LWA_ALPHA)
             except Exception:
                 pass
 
