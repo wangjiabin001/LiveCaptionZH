@@ -29,6 +29,14 @@ for f in git("-c", "core.quotepath=false", "ls-files").splitlines():
     items.append({"path": f, "mode": "100644", "type": "blob", "sha": blob["sha"]})
 print(f"上传 {len(items)} 个文件")
 
+# 本地已删除的文件，也要从远端树里移除（API 的 tree 合并只增不删）
+local = {i["path"] for i in items}
+remote_files = [x["path"] for x in api("GET", f"/git/trees/{base_tree}?recursive=1")["tree"] if x["type"] == "blob"]
+for path in remote_files:
+    if path not in local:
+        items.append({"path": path, "mode": "100644", "type": "blob", "sha": None})
+        print("  删除远端:", path)
+
 tree = api("POST", "/git/trees", {"base_tree": base_tree, "tree": items})
 commit = api("POST", "/git/commits", {"message": msg, "tree": tree["sha"], "parents": [head]})
 api("PATCH", "/git/refs/heads/master", {"sha": commit["sha"], "force": False})
