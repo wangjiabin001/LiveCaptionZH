@@ -126,6 +126,7 @@ class CaptionPipeline:
         self._rms = 0.0
         self._last_beat = 0.0
         self._sub_count = 0
+        self._silent_beats = 0
     # ---------- 引擎参数 ----------
     def _engine_kwargs(self) -> dict:
         from whisperlivekit.config import WhisperLiveKitConfig
@@ -222,10 +223,16 @@ class CaptionPipeline:
                 if arr.size:
                     self._rms = float(np.abs(arr).mean()) / 32768.0
             now = time.time()
+            # 心跳：常态静默，只在「采不到声音」或调试/终端模式下才输出。
+            # 它只是本机 print，不消耗任何模型 token；静默是为了不刷屏。
             if now - self._last_beat >= 10:
                 self._last_beat = now
-                warn = "" if self._rms > 0.0015 else "   ← 没听到声音：确认视频在播放、且走的是系统默认播放设备"
-                print(f"[状态] 运行 {int(now - self._t0)}s | 采集音量 {self._rms:.4f} | 已出字幕 {self._sub_count} 条{warn}", flush=True)
+                silent = self._rms <= 0.0015
+                self._silent_beats = self._silent_beats + 1 if silent else 0
+                if silent and self._silent_beats == 2:      # 连续 20 秒没声音 → 提醒一次
+                    print("[提示] 已连续 20 秒没听到声音：确认视频在播放、且声音走的是系统默认播放设备", flush=True)
+                elif self.console or os.environ.get("LIVECAPTION_DEBUG"):
+                    print(f"[状态] 运行 {int(now - self._t0)}s | 采集音量 {self._rms:.4f} | 已出字幕 {self._sub_count} 条", flush=True)
             await processor.process_audio(chunk)
 
         self.running = False
